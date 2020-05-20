@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials__item {
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+}
+
+.socials__icon {
+  width: 100%;
+  height: 100%;
+  fill: $icons-h;
+  /* background: svg-load('github.svg', fill=$text-color, width=100%, height=100%);
+  &:hover {
+    background: svg-load('github.svg', fill=#55ddcc, width=100%, height=100%);
+  } */
+}
+
+.socials__link {
+  display: block;
+  width: 27px;
+  height: 25px;
+}
