@@ -30,15 +30,13 @@ html(lang="en")
                       li.socials__item
                         a(href="").socials__link
                           +icon(item, "socials__icon")
-
             .hero__content
               .user-data
                 .user-data__desk Личный сайт вэб разработчика
-                h2.about__title.about__title-main Дмитрий Малуда
-
+                h1.title.title-hero Дмитрий Малуда
             .hero__bottom-btn
               a(href="").scroll-down-btn Скролл
-
+              +icon("Scroll", "scroll__icon")
         section.about-section
           .container
             .about
@@ -64,13 +62,12 @@ html(lang="en")
                             td #{row[2]}
               .about__user-content
                 .about__hello Привет, меня зовут
-                h2.about__title.about__title-next Дмитрий Малуда
+                h2.title.title-about Дмитрий Малуда
                 .about__desk
                   p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
+                  blockquote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                    +icon("Cross", "cross__icon")
       section.texture
-
       section.values
         .values-left
           .values-left__avatar
@@ -101,5 +98,4 @@ html(lang="en")
                           .skill__circle
                           .skill__circle
                           .skill__title= cell
-
       section.sliders
