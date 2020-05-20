@@ -6,5 +6,6 @@
   "bp-tablets": "768px",
   "bp-phones": "480px",
   "white": "#fff",
-  "icons-h": "#6e6864"
+  "icons-h": "#6e6864",
+  "linear-g": "#222427"
 }
