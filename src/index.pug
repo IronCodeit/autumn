@@ -6,7 +6,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Portfolio | main page.
     link(rel="stylesheet", href="main.css")
   body
     .wrapper
@@ -53,11 +53,10 @@ html(lang="en")
                         ["Родился:", "22 декабря 1987"]
                       ];
                     table.user-info__data
-                      col.t-col
                       tbody.user-info__data-body
                         each row in userdata
                           tr
-                            td #{row[0]}
+                            td.t-col #{row[0]}
                             td #{row[1]}
                             td #{row[2]}
               .about__user-content
@@ -67,7 +66,7 @@ html(lang="en")
                   p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about__desk
                   blockquote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                    +icon("st", "st__icon")
+                  +icon("st", "st__icon")
       section.texture
       section.values
         .values-left
@@ -83,8 +82,8 @@ html(lang="en")
           .values-right__content
             - 
               var items = [
-                ["Front-end", ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]],
-                ["Workflow", ["GIT", "Terminal", "Gulp", "Webpack"]]
+                ["Front-end", [{title: "HTML5", perc: '190'}, {title: "CSS3", perc: '80'}, {title: "Javascript", perc: '100'}, {title: "Jquery и Vue.js", perc: '175'}]],
+                ["Workflow", [{title: "GIT", perc: '150'}, {title: "Terminal", perc: '100'}, {title: "Gulp", perc: '170'}, {title: "Webpack", perc: '350'}]]
               ];
 
             ul.skills-list
@@ -94,9 +93,12 @@ html(lang="en")
                   ul.skills-row__list
                     each cell in row[1]
                       li.skills-row__item
-                        .skill
-                          .skill__circle
-                          .skill__circle
-                          .skill__circle
-                          .skill__title= cell
+                        .skill #{cell.title}
+                        svg(width="134" height="134").skill__title= cell
+                          circle(cx="67" cy="67" r="57" fill="transparent" stroke="#ccc").skill__title--icon.skill__title--icon-under
+                          circle(cx="67" cy="67" r="57" fill="transparent" stroke="url(#lgradient)" stroke-dashoffset=`${cell.perc}%`).skill__title--icon.skill__title--icon-above
+                          defs
+                            linearGradient(id='lgradient')
+                              stop(offset="0%" stop-color="#d0731b")
+                              stop(offset="100%" stop-color="#dc9322")
       section.sliders

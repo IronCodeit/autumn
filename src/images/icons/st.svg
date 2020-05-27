@@ -3,7 +3,6 @@
     <style>
       .cls-1 {
         font-size: 48px;
-        opacity: 0.1;
         fill: #db0200;
         font-family: OpenSans;
         font-style: italic;
