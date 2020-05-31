@@ -6,7 +6,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page.
+    title Portfolio | main page
     link(rel="stylesheet", href="main.css")
   body
     .wrapper
@@ -83,7 +83,7 @@ html(lang="en")
             - 
               var items = [
                 ["Front-end", [{title: "HTML5", perc: '190'}, {title: "CSS3", perc: '80'}, {title: "Javascript", perc: '100'}, {title: "Jquery и Vue.js", perc: '175'}]],
-                ["Workflow", [{title: "GIT", perc: '150'}, {title: "Terminal", perc: '100'}, {title: "Gulp", perc: '170'}, {title: "Webpack", perc: '350'}]]
+                ["Workflow", [{title: "GIT", perc: '150'}, {title: "Terminal", perc: '100'}, {title: "Gulp", perc: '170'}, {title: "Webpack", perc: '150'}]]
               ];
 
             ul.skills-list
@@ -102,3 +102,13 @@ html(lang="en")
                               stop(offset="0%" stop-color="#d0731b")
                               stop(offset="100%" stop-color="#dc9322")
       section.sliders
+        .container.container__sliders
+          h2.title.title-sliders Мои работы
+          .sliders__row
+            .sliders__col-left
+              .sliders__works
+                +image('content/bg-one.jpg', 'sliders__img')
+
+            .sliders__col-right
+
+      section.rew

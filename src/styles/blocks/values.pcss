@@ -31,9 +31,12 @@
     margin-bottom: 40px;
 }
 
+.skills-row__item {
+    position: relative;
+}
+
 .skills-row__item:not(:last-child) {
     margin-right: 68px;
-    position: relative;
 }
 
 .skill {
@@ -42,8 +45,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.5;
-    font-size: 18px;
     font-weight: 700;
+    text-align: center;
 }
 
 .skills-list {
@@ -52,7 +55,7 @@
 }
 
 .skills-list__item:not(:last-child) {
-    margin-bottom: 58px;
+    margin-bottom: 30px;
 }
 
 .skills-row__list {
@@ -69,20 +72,15 @@
 }
 
 .skill__title--icon {
-    stroke-width: 10px;
+    stroke-width: 9px;
     //stroke: #dc9322;
 }
 
 .skill__title--icon-under {
-    stroke-width: 2px;
+    stroke-width: 1px;
+    opacity: 0.3;
 }
 
 .skill__title--icon-above {
     stroke-dasharray: 261;
 }
-
-/* 
-.skills-list__item {
-    display: flex;
-    align-items: center;
-} */
