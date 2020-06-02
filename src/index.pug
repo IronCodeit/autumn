@@ -11,6 +11,7 @@ html(lang="en")
   body
     .wrapper
       .welcome-section
+      
         section.hero
           .container
             header.header
@@ -37,6 +38,7 @@ html(lang="en")
             .hero__bottom-btn
               a(href="").scroll-down-btn Скролл
               +icon("Scroll", "scroll__icon")
+
         section.about-section
           .container
             .about
@@ -67,7 +69,9 @@ html(lang="en")
                 .about__desk
                   blockquote Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
                   +icon("st", "st__icon")
+
       section.texture
+
       section.values
         .values-left
           .values-left__avatar
@@ -101,6 +105,7 @@ html(lang="en")
                             linearGradient(id='lgradient')
                               stop(offset="0%" stop-color="#d0731b")
                               stop(offset="100%" stop-color="#dc9322")
+
       section.sliders
         .container.container__sliders
           h2.title.title-sliders Мои работы
@@ -108,7 +113,55 @@ html(lang="en")
             .sliders__col-left
               .sliders__works
                 +image('content/bg-one.jpg', 'sliders__img')
-
+                .sliders__control
+                  - var pictures = ['content/bg-two.jpg', 'content/bg-three.jpg', 'content/bg-four.jpg', 'content/bg-five.jpg'];
+                  ul.sliders__list
+                    each slide in pictures
+                      li.sliders__item
+                        +image((src=`${slide}`), ".sliders__img")
+                .sliders__arrows
+                  button(type='button').sliders__arrow >
+                  button(type='button').sliders__arrow <
             .sliders__col-right
+              .sliders__right-number 2
+              .sliders__right-row
+                - var list = ['HTML', 'CSS', 'Javascript'];
+                ul.sliders__tags
+                  each tag in list
+                    li.sliders__tag #{tag}
+                .sliders__right-col
+                  h3.title.title-slide Сайт школы образования
+                  .sliders__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a(href="https://loftschool.com/", target="_blank").sliders__link Посмотреть сайт
 
       section.rew
+        .rew__avatar
+          +image('content/bg-leaves.png', 'rew__img')
+        .container.container__rew
+          .rew__block
+            .rew__header
+              h2.title.title-rew Что обо мне говорят
+              .rew__switches
+                button(type='button').rew__switch <
+                button(type='button').rew__switch >
+            .rew__slider
+              - 
+                var rews = [
+                  {text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!', pic: 'content/vova.png', name: 'Ковальчук Дмитрий', prof: 'Основатель Loftschool'},
+                  {text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах', pic: 'content/dima.png', name: 'Владимир Сабанцев', prof: 'Преподаватель'},
+                  {text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!', pic: 'content/vova.png', name: 'Ковальчук Дмитрий', prof: 'Основатель Loftschool'},
+                  {text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах', pic: 'content/dima.png', name: 'Владимир Сабанцев', prof: 'Преподаватель'}
+                ];
+              ul.slider__list
+                each line in rews
+                  li.slider__item
+                    .slider__block
+                      .rew__text #{line.text}
+                      .rew__row
+                        .rew__img-wrap
+                          +image((src=`${line.pic}`), ".rew__pic")
+                        .rew__content
+                          .rew__name #{line.name}
+                          .rew__prof #{line.prof}
+
+      footer.footer
