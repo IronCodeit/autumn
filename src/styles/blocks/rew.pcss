@@ -55,13 +55,22 @@
     align-items: flex-end;
 }
 
-.slider__item::before {
+.rew__text {
+    margin-bottom: 46px;
+    display: flex;
+    opacity: 0.5;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.rew__text::before {
     content: "";
     width: 75px;
     height: 63px;
     display: block;
     flex-shrink: 0;
-    background-size: 75px 63px;
     margin-right: 30px;
     opacity: 0.1;
     background: svg-load('Quote.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
@@ -96,23 +105,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.slider__block::before {
-    
+    min-height: 240px;
+    justify-content: space-between;
 }
 
 .rew__row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.rew__text {
-    margin-bottom: 46px;
-    display: flex;
+    padding-left: 105px;
 }
 
 .rew__name {
     margin-bottom: 20px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rew__prof {
+    opacity: 0.3;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
 }
