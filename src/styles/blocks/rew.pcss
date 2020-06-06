@@ -2,9 +2,101 @@
     background: url("../images/content/bg-rew2.png") center center no-repeat,
         url("../images/content/bg-rew1.png") center center no-repeat;
     background-size: cover, cover;
-    height: 100vh;
     min-height: 650px;
     position: relative;
+    padding: 120px 0;
+}
+
+.feedback__form {
+    color: $white;
+    max-width: 50%;
+}
+
+.feedback__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.feedback__input-title {
+    opacity: 0.3;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.feedback__lable {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.feedback__lable::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    flex-shrink: 0;
+    opacity: 0.3;
+}
+
+.feedback__lable-name::before {
+    background: svg-load('Avatar.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+}
+
+.feedback__lable-mail::before {
+    background: svg-load('Envelope.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+}
+
+.feedback__lable-tarea::before {
+    background: svg-load('Chat.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+    bottom: 53px;
+}
+
+.feedback__lable-tarea {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.feedback__input,
+.feedback__input:checked {
+    border: 0;
+    outline: none;
+}
+
+.feedback__input:checked .feedback__lable::before {
+    fill: transparent;
+}
+
+.feedback__input-ta {
+    color: $white;
+}
+
+.feedback__input {
+    background: transparent;
+    border-bottom: 2px solid $white;
+    padding: 15px 0;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.feedback__input::placeholder {
+    color: $white;
+    padding-left: 50px;
+}
+
+.feedback__input-ta::placeholder {
+    padding-right: 200px;
+}
+
+.feedback__input-ta {
+    resize: none;
+    line-height: 36px;
 }
 
 .rew__img {
@@ -16,8 +108,7 @@
 .rew__header {
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .title-rew {
@@ -105,7 +196,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 240px;
+    min-height: 245px;
     justify-content: space-between;
 }
 
@@ -127,4 +218,23 @@
     color: $white;
     font-size: 16px;
     font-weight: 400;
+}
+
+.rew__block {
+    margin-bottom: 100px;
+}
+
+.title-feedback {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+
+.feedback__btn {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    padding: 30px 120px;
+    background: $btn;
 }
