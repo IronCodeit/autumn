@@ -1,0 +1,44 @@
+section.rew
+  .rew__avatar
+    +image('content/bg-leaves.png', 'rew__img')
+  .container.container__rew
+    .rew__block
+      .rew__header
+        h2.title.title-rew Что обо мне говорят
+        .rew__switches
+          button(type='button').rew__switch <
+          button(type='button').rew__switch >
+      .rew__slider
+        - 
+          var rews = [
+            {text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!', pic: 'content/vova.png', name: 'Ковальчук Дмитрий', prof: 'Основатель Loftschool'},
+            {text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах', pic: 'content/dima.png', name: 'Владимир Сабанцев', prof: 'Преподаватель'},
+            {text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!', pic: 'content/vova.png', name: 'Ковальчук Дмитрий', prof: 'Основатель Loftschool'},
+            {text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах', pic: 'content/dima.png', name: 'Владимир Сабанцев', prof: 'Преподаватель'}
+          ];
+        ul.slider__list
+          each line in rews
+            li.slider__item
+              .slider__block
+                .rew__text #{line.text}
+                .rew__row
+                  .rew__img-wrap
+                    +image((src=`${line.pic}`), ".rew__pic")
+                  .rew__content
+                    .rew__name #{line.name}
+                    .rew__prof #{line.prof}
+    .feedback
+      h3.title.title-feedback Связаться со мной
+      form.feedback__form
+        .feedback__row
+            label.feedback__lable.feedback__lable-name
+              span.feedback__input-title Введите ваше имя
+              input.feedback__input(placeholder='Ковальчук Дмитрий')
+            label.feedback__lable.feedback__lable-mail
+              span.feedback__input-title Введите ваш email
+              input.feedback__input(placeholder='loftschool@study.com')
+        .feedback__textarea
+            label.feedback__lable.feedback__lable-tarea
+              span.feedback__input-title Сообщение к письму
+              textarea.feedback__input.feedback__input-ta(placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+            button.feedback__btn(type='submit') Отправить

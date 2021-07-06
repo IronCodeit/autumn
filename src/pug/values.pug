@@ -1,0 +1,33 @@
+section.values
+  .values-left
+    .values-left__avatar
+      +image('content/bg-hands.png', 'values__img')
+  .values-right
+    .values-right__title
+      .values-section__title-content
+        .longtitle
+          h2.longtitle__text Чем я могу быть полезен вам
+          .longtitle__desk
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .values-right__content
+      - 
+        var items = [
+          ["Front-end", [{title: "HTML5", perc: '190'}, {title: "CSS3", perc: '80'}, {title: "Javascript", perc: '100'}, {title: "Jquery и Vue.js", perc: '175'}]],
+          ["Workflow", [{title: "GIT", perc: '150'}, {title: "Terminal", perc: '100'}, {title: "Gulp", perc: '170'}, {title: "Webpack", perc: '150'}]]
+        ];
+
+      ul.skills-list
+        each row in items
+          li.skills-list__item.skills-row
+            .skills-row__title #{row[0]}
+            ul.skills-row__list
+              each cell in row[1]
+                li.skills-row__item
+                  .skill #{cell.title}
+                  svg(width="134" height="134").skill__title= cell
+                    circle(cx="67" cy="67" r="57" fill="transparent" stroke="#ccc").skill__title--icon.skill__title--icon-under
+                    circle(cx="67" cy="67" r="57" fill="transparent" stroke="url(#lgradient)" stroke-dashoffset=`${cell.perc}%`).skill__title--icon.skill__title--icon-above
+                    defs
+                      linearGradient(id='lgradient')
+                        stop(offset="0%" stop-color="#d0731b")
+                        stop(offset="100%" stop-color="#dc9322")

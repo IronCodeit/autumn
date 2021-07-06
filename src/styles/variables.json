@@ -6,5 +6,14 @@
   "bp-tablets": "768px",
   "bp-phones": "480px",
   "white": "#fff",
-  "icons-h": "#6e6864"
+  "icons-h": "#6e6864",
+  "linear-g": "#222427",
+  "red": "#db0200",
+  "titleS": "#333c49",
+  "arr": "#353e4e",
+  "num": "#e6e6e6",
+  "btag": "#859ec2;",
+  "link": "#586ed3;",
+  "foot": "#222427;",
+  "btn": "#dc9322;"
 }

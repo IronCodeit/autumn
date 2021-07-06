@@ -1,0 +1,239 @@
+.rew {
+    background: url("../images/content/bg-rew2.png") center center no-repeat,
+        url("../images/content/bg-rew1.png") center center no-repeat;
+    background-size: cover, cover;
+    min-height: 650px;
+    position: relative;
+    padding: 120px 0;
+}
+
+.feedback__form {
+    color: $white;
+    max-width: 50%;
+}
+
+.feedback__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.feedback__input-title {
+    opacity: 0.3;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.feedback__lable {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.feedback__lable::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    flex-shrink: 0;
+    opacity: 0.3;
+}
+
+.feedback__lable-name::before {
+    background: svg-load('Avatar.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+}
+
+.feedback__lable-mail::before {
+    background: svg-load('Envelope.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+}
+
+.feedback__lable-tarea::before {
+    background: svg-load('Chat.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+    bottom: 53px;
+}
+
+.feedback__lable-tarea {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.feedback__input,
+.feedback__input:checked {
+    border: 0;
+    outline: none;
+}
+
+.feedback__input:checked .feedback__lable::before {
+    fill: transparent;
+}
+
+.feedback__input-ta {
+    color: $white;
+}
+
+.feedback__input {
+    background: transparent;
+    border-bottom: 2px solid $white;
+    padding: 15px 0 15px 50px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.feedback__input::placeholder {
+    color: $white;
+}
+
+.feedback__input-ta::placeholder {
+    padding-right: 200px;
+}
+
+.feedback__input-ta {
+    resize: none;
+    line-height: 36px;
+}
+
+.rew__img {
+    position: absolute;
+    top: -11%;
+    left: 80%;
+}
+
+.rew__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.title-rew {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 120px;
+}
+
+.rew__switch {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    color: $white;
+
+    &:not(:last-child) {
+        margin-right: 31px;
+    }
+}
+
+.rew__slider {
+    width: 60%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.slider__list {
+    display: flex;
+}
+
+.slider__item {
+    width: 48%;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rew__text {
+    margin-bottom: 46px;
+    display: flex;
+    opacity: 0.5;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.rew__text::before {
+    content: "";
+    width: 75px;
+    height: 63px;
+    display: block;
+    flex-shrink: 0;
+    margin-right: 30px;
+    opacity: 0.1;
+    background: svg-load('Quote.svg', fill=#ffffff, width=100%, height=100%) no-repeat;
+}
+
+.slider__item:nth-child(2n+1) {
+    margin-right: 4%;
+}
+
+.rew__img-wrap {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.rew__pic {
+    width: 100%;
+}
+
+.rew__img-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slider__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 245px;
+    justify-content: space-between;
+}
+
+.rew__row {
+    display: flex;
+    align-items: center;
+    padding-left: 105px;
+}
+
+.rew__name {
+    margin-bottom: 20px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rew__prof {
+    opacity: 0.3;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rew__block {
+    margin-bottom: 100px;
+}
+
+.title-feedback {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+
+.feedback__btn {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    padding: 30px 120px;
+    background: $btn;
+}

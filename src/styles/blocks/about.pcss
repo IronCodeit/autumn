@@ -1,56 +1,80 @@
-.about-section {
-    position: absolute;
-    bottom: -50px;
-}
-
 .about {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    padding: 0 150px;
+    padding: 0 250px;
+
+    &-section {
+        position: relative;
+        bottom: -63px;
+    }
 
     &__user-data {
-        //flex: 1;
-        margin-right: 158px;
+        margin-right: 140px;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__user-content {
-        //max-width: 518px;
-        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-}
 
-.about__title {
-    font-size: 72px;
-    font-weight: 800;
-    color: $white;
+    &__hello {
+        margin-bottom: 25px;
+        opacity: 0.5;
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;    
+    }
 
-    &-next {
-        font-size: 36px;
-        margin-bottom: 38px;
+    &__desk {
+        position: relative;
+        opacity: 0.5;
+        color: $white;
+        font-size: 16px;
         font-weight: 400;
+        //height: 100%;
     }
 }
 
-.about__hello {
-    margin-bottom: 30px;
-    opacity: 0.5;
-    color: $white;
-    font-size: 16px;
-    font-weight: 400;
+.title-about {
+    font-size: 36px;
+    margin-bottom: 38px;
+    font-weight: 400;    
 }
 
-.t-col {
-    width: 150px;
-    opacity: 0.15;
+blockquote {
+    font-style: italic;
+    margin: 0;
+    font-weight: 300;
+    margin-top: auto;
+    flex: 1;
+    position: relative;
     color: $white;
-    font-size: 16px;
-    font-weight: 400;
+    opacity: 0.5;
+    line-height: 30px;
+    padding-bottom: 15px;
 }
 
-.about__desk {
-    opacity: 0.5;
-    color: $white;
-    font-size: 16px;
+.st__icon {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    fill: $red;
+    opacity: 1;
+}
+
+.about__author {
+    line-height: 30px;
     font-weight: 400;
+    color: $white;
+    opacity: 0.5;
+    line-height: 30px;
 }
